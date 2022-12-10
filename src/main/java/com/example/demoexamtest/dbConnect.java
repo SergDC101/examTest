@@ -6,6 +6,8 @@ public class dbConnect {
 
     Connection dbConnect;
 
+
+
     private static final String host = "127.0.0.1";
     private static final String port = "3307";
     private static final String nameDB = "examtest";
@@ -29,6 +31,16 @@ public class dbConnect {
         preparedStatement.setString(1, loginText);
         preparedStatement.setString(2, passText);
         resSet = preparedStatement.executeQuery();
+
+        return resSet;
+    }
+
+    public ResultSet getTableWorkers() throws SQLException, ClassNotFoundException {
+        ResultSet resSet = null;
+        String select = "SELECT * From "+nameDB+".wokers";
+
+        PreparedStatement prSt = getDbConnect().prepareStatement(select);
+        resSet = prSt.executeQuery();
 
         return resSet;
     }

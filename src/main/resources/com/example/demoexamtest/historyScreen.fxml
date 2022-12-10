@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demoexamtest.HistoryScreeenController">
+   <children>
+      <TableView fx:id="tableView" layoutX="25.0" layoutY="93.0" prefHeight="293.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="110.0" text="id" />
+          <TableColumn fx:id="nameColumn" prefWidth="110.0" text="name" />
+            <TableColumn fx:id="loginColumn" prefWidth="110.0" text="login" />
+            <TableColumn fx:id="passColumn" prefWidth="110.0" text="password" />
+            <TableColumn fx:id="historyColumn" prefWidth="110.0" text="log_history" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
